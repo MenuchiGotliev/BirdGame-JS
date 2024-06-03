@@ -1,0 +1,172 @@
+body {
+    background-image: url(backgrounds/b.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.game-over {
+    font-size: 500%;
+    color: #ffffff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3vw;
+    font-family: cursive;
+    color: #ffffff;
+    font-style: italic;
+    text-shadow: 2px 2px rgb(218, 12, 126);
+}
+.game {
+    margin-top: 30vw;
+    width: 80vw;
+    height: 15vw;
+    margin-left: 10vw;
+}
+#bird {
+    width: 9vw;
+    height: 8vw;
+    background-image: url(images/bird.png);
+    background-size: auto 8vw;
+    position: relative;
+    left: 8vw;
+    top: 2vw;
+}
+#cactus {
+    width: 5vw;
+    height: 6vw;
+    position: relative;
+    bottom: 4vw;
+    left: 70vw; /* width of frame - width of cactus */
+    background-image: url(images/cactus.png);
+    background-size: 6vw;
+    animation: cactus-block 1.2s infinite linear;
+}
+#strwabarry {
+    width: 5vw;
+    height: 5vw;
+    position: relative;
+    bottom: 20vw;
+    left: 70vw; /* width of frame - width of cactus */
+    background-image: url(images/strawmary.png);
+    background-size: 5vw;
+    animation: cactus-block 3s infinite linear;
+}
+#apple {
+    width: 4vw;
+    height: 5vw;
+    position: relative;
+    bottom: 20vw;
+    left: 60vw; /* width of frame - width of cactus */
+    background-image: url(images/apple.png);
+    background-size: 4vw;
+    animation: fruit-block 3s infinite linear;
+}
+#banana {
+    width: 6vw;
+    height: 5vw;
+    position: relative;
+    bottom: 20vw;
+    left: 60vw; /* width of frame - width of cactus */
+    background-image: url(images/banana.png);
+    background-size: 6vw;
+    animation: fruit-block 3s infinite linear;
+}
+.jump {
+    animation: jump 0.6s linear;
+}
+@keyframes jump {
+    0% {
+        top: 2vw; /* distance from the top of the parent element */
+    }
+    30% {
+        top: -12vw;
+    }
+    50% {
+        top: -20vw;
+    }
+    80% {
+        top: -12vw;
+    }
+    100% {
+        top: 2vw;
+    }
+}
+@keyframes cactus-block {
+    0% {
+        left: 80vw;
+    }
+    100% {
+        left: -20vw;
+    }
+}
+@keyframes fruit-block {
+    0% {
+        left: 80vw;
+    }
+    100% {
+        left: -30vw;
+    }
+}
+#img {
+    width: 6vw;
+    height: 6vw;
+    background-size: auto 6vw;
+    position: relative;
+    left: 15vw;
+    top: -15vw;
+}
+@media screen and (max-width: 1024px) {
+    #bird {
+        width: 9vw;
+        height: 8vw;
+        background-image: url(images/bird.png);
+        background-size: auto 8vw;
+        position: relative;
+        left: 20vw;
+        top: 2vw;
+    }
+}
+#clock {
+    font-size: 48px;
+    color: rgb(251, 245, 245);
+    margin-top: 50px;
+}
+.sum {
+    width: 6vw;
+    height: 6vw;
+    font-size: 5vw;
+    align-items: center;
+    text-align: center;
+}
+#Instructions {
+    width: 6vw;
+    height: 6vw;
+    font-size: 48px;
+    color: rgb(251, 245, 245);
+    margin-top: 50px;
+    text-shadow: 2px 2px rgb(218, 12, 126);
+}
+@keyframes gameover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+#p {
+    font-size: 48px;
+    color: rgb(251, 245, 245);
+    text-shadow: 2px 2px rgb(218, 12, 126);
+    width: 40%;
+    height: 40%;
+    animation-name: gameover;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    padding: 25vw;
+}

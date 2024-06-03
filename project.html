@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The project</title>
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="f.css" />
+</head>
+
+<body>
+</head>
+<body>
+    <div id="id01" class="modal">
+        <form name="f" class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div id="clockContainer"></div>
+            <div class="loginContainer">
+                <br>
+                <h1 >WELCOME TO THE BIRD GAME</h1>
+                <label for="uname" class = "font"><b>Playername</b></label>
+                <input id="usn" class="login"  type="text" placeholder="Enter Username" name="uname" required>
+                <label for="uname" class = "font"><b>Choose Level</b></label>
+                <br/>
+                <input type ="button"value ='level 1' >
+                <input type ="button"value ='level 2'>
+                <input type ="button"value ='level 3'>
+                <div id = "Instructions">הוראות</div>
+            </div>
+        </form>
+    </div>
+    
+     <p id = "p"></p>
+    <div class="game">
+        <img id = "img"src="images/star.png">
+        <div id="bird"></div>
+        <div id="cactus"></div>
+        <div id="strwabarry"></div>
+        <div id="apple"></div>
+        <div id="banana"></div>
+        
+    </div>
+
+      
+   
+    <script src="project.js"></script>
+</body>
+</html>
